@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Showroom Keisha Mobil</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;color:#172033;background:#f7f8fa}
+header{background:white;padding:16px 7%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:48px;height:48px;object-fit:contain}
+.brand strong{font-size:19px}
+.brand p{color:#64748b;font-size:13px;margin-top:4px}
+nav a{color:#334155;text-decoration:none;margin-left:20px;font-size:14px}
+.hero{min-height:440px;background:linear-gradient(90deg,#071426dd,#07142655),url('assets/img/hero.jpg') center/cover;display:flex;align-items:center;padding:65px 9%;color:white}
+.hero h1{font-size:clamp(32px,5vw,58px);max-width:750px;line-height:1.12;margin:20px 0}
+.hero h1 span{color:#f5b942}
+.hero p{max-width:570px;line-height:1.7}
+.btn{display:inline-block;padding:15px 23px;border-radius:30px;background:#138b5b;color:white;text-decoration:none;font-weight:bold;margin-top:24px}
+.container{max-width:1100px;margin:auto;padding:45px 20px}
+.search{display:flex;gap:10px;margin:20px 0 35px}
+.search input{flex:1;min-width:0;padding:15px;border:1px solid #ddd;border-radius:9px;font-size:15px}
+.search button{border:0;background:#1768e5;color:white;padding:0 25px;border-radius:9px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.card{background:white;border-radius:14px;padding:22px;box-shadow:0 4px 20px #0000000b}
+.car-icon{font-size:48px;text-align:center;background:#edf3fa;padding:25px;border-radius:10px}
+.card h3{margin:16px 0 8px}
+.price{color:#138b5b;font-weight:bold;font-size:18px}
+.card p{color:#64748b;font-size:14px;margin:7px 0}
+.card a{display:block;text-align:center;background:#138b5b;color:white;padding:12px;border-radius:8px;text-decoration:none;margin-top:16px}
+footer{text-align:center;background:#101d30;color:white;padding:30px}
+@media(max-width:600px){
+header{padding:14px 5%}
+nav{width:100%;display:flex;justify-content:space-between}
+nav a{margin:0;font-size:12px}
+.hero{min-height:390px;padding:45px 7%}
+.search button{padding:0 15px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="brand">
+<img src="assets/img/logo.png" alt="Logo Keisha Mobil">
+<div><strong>Showroom Keisha Mobil</strong>
+<p>Marketplace Mobil Pilihan Berkualitas</p></div>
+</div>
+<nav>
+<a href="#katalog">Katalog Mobil</a>
+<a href="#tentang">Tentang</a>
+<a href="#kontak">Kontak</a>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<p>✓ Temukan kendaraan pilihan Anda</p>
+<h1>Perjalanan baru dimulai dari <span>Showroom Keisha Mobil.</span></h1>
+<p>Temukan mobil impian Anda dengan pilihan kendaraan berkualitas. Hubungi kami untuk informasi stok, harga, dan jadwal melihat mobil.</p>
+<a class="btn" href="#katalog">Lihat Katalog →</a>
+</div>
+</section>
+
+<section class="container" id="katalog">
+<h2>Katalog Mobil</h2>
+<p style="color:#64748b;margin-top:8px">Temukan kendaraan sesuai kebutuhan Anda.</p>
+
+<div class="search">
+<input id="cari" placeholder="Cari merek, model, atau tahun...">
+<button onclick="cariMobil()">Cari</button>
+</div>
+
+<div class="grid" id="daftar">
+<div class="card">
+<div class="car-icon">🚗</div>
+<h3>Toyota Avanza</h3>
+<p>Tahun 2022 • Automatic • Bensin</p>
+<div class="price">Hubungi untuk harga</div>
+<a href="https://wa.me/628XXXXXXXXXX">Tanya via WhatsApp</a>
+</div>
+<div class="card">
+<div class="car-icon">🚙</div>
+<h3>Honda Brio</h3>
+<p>Tahun 2021 • Automatic • Bensin</p>
+<div class="price">Hubungi untuk harga</div>
+<a href="https://wa.me/628XXXXXXXXXX">Tanya via WhatsApp</a>
+</div>
+<div class="card">
+<div class="car-icon">🚘</div>
+<h3>Toyota Calya</h3>
+<p>Tahun 2023 • Manual • Bensin</p>
+<div class="price">Hubungi untuk harga</div>
+<a href="https://wa.me/628XXXXXXXXXX">Tanya via WhatsApp</a>
+</div>
+</div>
+</section>
+
+<section class="container" id="tentang">
+<h2>Tentang Keisha Mobil</h2>
+<p style="margin-top:12px;line-height:1.8;color:#64748b">
+Showroom Keisha Mobil membantu Anda menemukan kendaraan yang sesuai kebutuhan. Hubungi kami untuk informasi lebih lanjut.
+</p>
+</section>
+
+<footer id="kontak">
+<h3>Showroom Keisha Mobil</h3>
+<p style="margin-top:10px">Temukan mobil pilihan Anda bersama kami.</p>
+<p style="margin-top:15px">© 2026 Keisha Mobil</p>
+</footer>
+
+<script>
+function cariMobil(){
+const q=document.getElementById('cari').value.toLowerCase();
+document.querySelectorAll('.card').forEach(card=>{
+card.style.display=card.innerText.toLowerCase().includes(q)?'block':'none';
+});
+}
+</script>
+</body>
+</html>
