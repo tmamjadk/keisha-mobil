@@ -1,0 +1,68 @@
+
+:root{
+ --ink:#172536;--navy:#14263b;--blue:#315b78;--gold:#c5a46d;
+ --muted:#718092;--paper:#f7f8fa;--line:#e7ebef;--white:#fff;
+ --success:#23845b;--shadow:0 18px 48px rgba(20,38,59,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.65}
+a{transition:all .2s ease}
+.navbar{border-bottom:1px solid rgba(20,38,59,.07);backdrop-filter:blur(14px)}
+.navbar-brand{color:var(--navy)!important;letter-spacing:-.35px}
+.navbar-brand img{width:58px!important;height:58px!important;object-fit:contain;flex-shrink:0}
+.nav-link{font-size:.92rem;font-weight:550;color:#536273!important}
+.nav-link:hover{color:var(--gold)!important}
+.btn{font-weight:600;transition:all .2s ease}
+.btn-primary{background:var(--navy);border-color:var(--navy)}
+.btn-primary:hover{background:#243e5b;border-color:#243e5b;transform:translateY(-1px)}
+.btn-success{background:#23845b;border-color:#23845b}
+.btn-success:hover{background:#176b49;border-color:#176b49}
+.btn-outline-primary{color:var(--navy);border-color:#bdc8d2}
+.btn-outline-primary:hover{background:var(--navy);border-color:var(--navy)}
+.hero{position:relative;background-image:linear-gradient(90deg,rgba(9,23,39,.88),rgba(9,23,39,.36)),url("img/hero.jpg");background-position:center;background-size:cover;background-repeat:no-repeat;color:#fff;padding:clamp(100px,15vw,180px) 0}
+.hero .badge{padding:.65rem .9rem;font-weight:600;color:var(--navy)!important}
+.hero h1{max-width:780px;font-size:clamp(2.5rem,5.5vw,4.7rem);font-weight:760;letter-spacing:-2px;line-height:1.08}
+.hero h1 span{color:#dfc69e}
+.hero p{max-width:620px;color:#e0e7ed;font-size:1.08rem;margin-top:1.2rem}
+.kicker{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:#9b7b4e;font-weight:750}
+.section-title{font-weight:760;letter-spacing:-1.1px;color:var(--navy)}
+.search-box{position:relative;margin-top:-30px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
+.form-control,.form-select{border-color:#dce2e8;border-radius:10px;padding:.72rem .9rem}
+.form-control:focus,.form-select:focus{border-color:#9aafc0;box-shadow:0 0 0 .2rem rgba(49,91,120,.12)}
+.car-card{height:100%;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;transition:transform .25s,box-shadow .25s;box-shadow:0 7px 24px rgba(20,38,59,.035)}
+.car-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.car-photo{height:225px;background:#edf1f4;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.car-photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.car-card:hover .car-photo img{transform:scale(1.035)}
+.car-photo .placeholder{font-size:4rem;color:#aab5bf}
+.car-card .card-body{padding:22px}
+.car-title{font-weight:750;color:var(--navy);letter-spacing:-.3px}
+.car-price{font-size:1.18rem;font-weight:800;color:#9a7847}
+.car-spec{font-size:.85rem;color:#667586}
+.car-spec i{width:20px;color:#9a7847}
+.pill{display:inline-block;background:#f1f4f6;color:#506174;border-radius:50px;padding:5px 11px;font-size:.75rem;font-weight:700}
+.benefit{background:#fff;border:1px solid var(--line);border-radius:17px;padding:24px;height:100%;box-shadow:0 7px 22px rgba(20,38,59,.025)}
+.benefit-icon{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:#f3eee5;color:#9a7847;font-size:1.15rem;margin-bottom:14px}
+.contact-panel{background:linear-gradient(135deg,#14263b,#203a53);color:#fff;border-radius:24px;padding:clamp(26px,5vw,52px);box-shadow:var(--shadow)}
+.contact-panel p{color:#d4dce4}
+.footer{background:#101d2b;color:#fff}
+.admin-body{background:#f4f6f8;min-height:100vh}
+.admin-wrap{max-width:1180px}
+.admin-card{border:1px solid #e9edf0;border-radius:18px;box-shadow:0 10px 32px rgba(20,38,59,.045);background:#fff}
+.admin-nav{background:linear-gradient(110deg,#14263b,#213d57)}
+.admin-nav h1{font-weight:750;letter-spacing:-.5px}
+.table{--bs-table-bg:transparent}
+.table td,.table th{vertical-align:middle;padding:.85rem .7rem}
+.table thead th{font-size:.76rem;text-transform:uppercase;letter-spacing:.8px;color:#718092;border-bottom-color:#e6ebef}
+.admin-stat{border:1px solid var(--line);border-radius:17px;background:#fff;padding:22px;height:100%}
+.admin-stat .stat-label{font-size:.86rem;color:var(--muted)}
+.admin-stat .stat-value{font-size:2.25rem;line-height:1.2;font-weight:800;color:var(--navy)}
+.admin-action{display:flex;align-items:center;gap:13px;padding:17px;border:1px solid var(--line);border-radius:15px;text-decoration:none;color:var(--ink);background:#fff;height:100%}
+.admin-action:hover{border-color:#c6b18e;transform:translateY(-2px);box-shadow:var(--shadow);color:var(--navy)}
+.admin-action i{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:#f3eee5;color:#947347;font-size:1.1rem}
+.admin-action strong{display:block}
+.admin-action small{display:block;color:var(--muted)}
+.db-indicator{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:50px;background:#eaf5ef;color:#21734e;font-weight:700;font-size:.8rem}
+.db-indicator:before{content:"";width:8px;height:8px;border-radius:50%;background:#2c9a66}
+@media(max-width:575px){.hero{padding:78px 0}.hero h1{letter-spacing:-1px}.car-photo{height:190px}.search-box{margin:0 8px;margin-top:-18px}.navbar-brand img{width:48px!important;height:48px!important}}
