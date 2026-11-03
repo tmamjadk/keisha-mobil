@@ -66,3 +66,255 @@ a{transition:all .2s ease}
 .db-indicator{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:50px;background:#eaf5ef;color:#21734e;font-weight:700;font-size:.8rem}
 .db-indicator:before{content:"";width:8px;height:8px;border-radius:50%;background:#2c9a66}
 @media(max-width:575px){.hero{padding:78px 0}.hero h1{letter-spacing:-1px}.car-photo{height:190px}.search-box{margin:0 8px;margin-top:-18px}.navbar-brand img{width:48px!important;height:48px!important}}
+
+/* =====================================
+   KEISHA MOBIL - RESPONSIVE MOBILE
+   ===================================== */
+
+   * {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Semua section */
+section {
+    width: 100%;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+/* Hero */
+.hero {
+    min-height: 550px;
+    padding: 80px 6%;
+    display: flex;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 5vw, 58px);
+    line-height: 1.15;
+}
+
+.hero p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Judul section */
+section h2 {
+    font-size: clamp(25px, 4vw, 38px);
+    line-height: 1.3;
+}
+
+/* Slider foto */
+.slider,
+.slides,
+.photo-slider {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.slide,
+.slide img,
+.car-photo img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Katalog mobil */
+.car-grid,
+.car-container,
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.car-card {
+    min-width: 0;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.car-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+.car-card h3 {
+    font-size: 18px;
+}
+
+.specs,
+.price {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.wa-link {
+    display: inline-block;
+    max-width: 100%;
+    text-align: center;
+    padding: 12px 18px;
+}
+
+/* Tentang kami */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.about img,
+.about-photo {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Form ulasan */
+input,
+textarea,
+select,
+button {
+    max-width: 100%;
+    font: inherit;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Google Maps */
+iframe {
+    max-width: 100%;
+}
+
+/* =====================================
+   TABLET
+   ===================================== */
+@media (max-width: 900px) {
+    .car-grid,
+    .car-container,
+    .cars-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero {
+        min-height: 450px;
+    }
+}
+
+/* =====================================
+   HP
+   ===================================== */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 45px 18px;
+    }
+
+    .hero {
+        min-height: 420px;
+        padding: 55px 20px;
+        text-align: center;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    section h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .car-grid,
+    .car-container,
+    .cars-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .car-card {
+        border-radius: 12px;
+    }
+
+    .car-card img {
+        height: 220px;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about img,
+    .about-photo {
+        width: 100%;
+    }
+
+    .wa-link {
+        width: 100%;
+    }
+
+    iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    /* Navigasi */
+    nav {
+        max-width: 100%;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    /* Form */
+    input,
+    textarea,
+    select,
+    button {
+        width: 100%;
+        min-height: 44px;
+    }
+}
