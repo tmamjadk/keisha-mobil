@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keisha Mobil | Marketplace Mobil</title>
+<meta name="description" content="Keisha Mobil - Marketplace mobil pilihan berkualitas.">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+<style>
+:root {
+ --ink:#172536;--navy:#14263b;--blue:#315b78;
+ --gold:#c5a46d;--muted:#718092;--paper:#f7f8fa;
+ --line:#e7ebef;--shadow:0 18px 48px rgba(20,38,59,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);line-height:1.65;overflow-x:hidden}
+img{max-width:100%}
+.keisha-navbar{background:#111!important;border-bottom:1px solid #333}
+.keisha-navbar .navbar-brand,.keisha-navbar .nav-link{color:#fff!important}
+.keisha-navbar .navbar-brand small{color:#bbb}
+.keisha-navbar .nav-link:hover{color:var(--gold)!important}
+.keisha-navbar .navbar-toggler{border-color:#aaa}
+.keisha-navbar .navbar-toggler-icon{filter:invert(1)}
+.brand-logo{width:68px;height:58px;object-fit:contain}
+.btn-instagram{background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);color:#fff}
+.btn-whatsapp{background:#25D366;color:white}
+.hero{background:linear-gradient(90deg,rgba(9,23,39,.9),rgba(9,23,39,.4)),url("img/hero.jpg") center/cover no-repeat;color:white;padding:clamp(100px,15vw,180px) 0}
+.hero h1{max-width:780px;font-size:clamp(2.5rem,5.5vw,4.7rem);font-weight:760;letter-spacing:-2px;line-height:1.1}
+.hero h1 span{color:#dfc69e}
+.hero p{max-width:620px;color:#e0e7ed;font-size:1.08rem}
+.section-title{font-weight:760;color:var(--navy);letter-spacing:-1px}
+.kicker{font-size:.72rem;letter-spacing:2px;color:#9b7b4e;font-weight:750}
+.search-box{position:relative;margin-top:-30px;background:white;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
+.car-card{height:100%;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:white;box-shadow:0 7px 24px #14263b09;transition:.25s}
+.car-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.car-photo{height:225px;background:#edf1f4;overflow:hidden}
+.car-photo img{width:100%;height:100%;object-fit:cover}
+.car-card .card-body{padding:22px}
+.car-title{font-weight:750;color:var(--navy)}
+.car-price{font-size:1.18rem;font-weight:800;color:#9a7847}
+.car-spec{font-size:.85rem;color:#667586}
+.car-spec i{width:20px;color:#9a7847}
+.pill{display:inline-block;background:#f1f4f6;color:#506174;border-radius:50px;padding:5px 11px;font-size:.75rem;font-weight:700}
+.benefit{background:white;border:1px solid var(--line);border-radius:17px;padding:24px;height:100%}
+.benefit-icon{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:#f3eee5;color:#9a7847;font-size:1.15rem;margin-bottom:14px}
+.testimonial-section{padding-top:65px;padding-bottom:75px}
+.testimonial-wrapper{position:relative;padding:0 58px}
+.testimonial-track{display:flex;gap:24px;overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;scrollbar-width:none;padding:8px 2px 20px}
+.testimonial-track::-webkit-scrollbar{display:none}
+.testimonial-slide{flex:0 0 calc(33.333% - 16px);scroll-snap-align:start}
+.testimonial-card{height:100%;background:white;border:1px solid #edf0f3;border-radius:20px;overflow:hidden;box-shadow:0 8px 28px #10243a12}
+.testimonial-photo{width:100%;height:230px;object-fit:cover;display:block;background:#f8f9fb}
+.testimonial-info{padding:24px}
+.testimonial-name{color:#10243a;font-size:17px;font-weight:700}
+.testimonial-stars{color:#c49a58;letter-spacing:2px}
+.testimonial-review{color:#687382;font-size:14px;line-height:1.8}
+.testimonial-controls{position:absolute;top:50%;left:0;right:0;transform:translateY(-50%);display:flex;justify-content:space-between;pointer-events:none}
+.testimonial-arrow{width:44px;height:44px;border:0;border-radius:50%;background:#10243a;color:white;pointer-events:auto}
+.contact-panel{background:linear-gradient(135deg,#14263b,#203a53);color:white;border-radius:24px;padding:clamp(26px,5vw,52px)}
+.contact-panel p{color:#d4dce4}
+.km-footer{background:#10243a;color:#dce4ed;padding:45px 0 18px;margin-top:35px}
+.km-footer h5,.footer-brand{color:white;font-weight:700}
+.footer-brand{font-size:22px;letter-spacing:1px;margin-bottom:10px}
+.km-footer p{color:#b9c5d2;font-size:13px;line-height:1.8}
+.footer-link{display:block;color:#c5cfda;text-decoration:none;font-size:13px;margin-bottom:11px}
+.footer-link:hover{color:var(--gold)}
+.footer-address{display:flex;gap:10px;font-size:14px;line-height:1.8}
+.footer-address i{color:var(--gold)}
+.footer-social{display:inline-flex;align-items:center;gap:9px;color:white;padding:11px 17px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:700;margin:5px}
+.footer-wa{background:#25D366}
+.footer-instagram{background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5)}
+.footer-divider{border-color:#ffffff22;margin:28px 0 18px}
+.developer-label{font-size:10px;letter-spacing:2px;color:#aebbc9}
+.developer-name{color:#d8b477;font-size:16px;font-weight:600;letter-spacing:1.2px}
+@media(max-width:991px){.testimonial-slide{flex:0 0 calc(50% - 12px)}}
+@media(max-width:600px){
+ .hero{padding:75px 18px;text-align:center}
+ .hero h1{font-size:32px;letter-spacing:-1px}
+ .hero p{font-size:14px}
+ .hero .d-flex{justify-content:center}
+ .testimonial-wrapper{padding:0 38px}
+ .testimonial-slide{flex:0 0 100%}
+ .testimonial-photo{height:210px}
+ .testimonial-info{padding:19px}
+ .testimonial-arrow{width:36px;height:36px}
+ .brand-logo{width:52px;height:48px}
+ .search-box{margin-top:-18px}
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm keisha-navbar">
+<div class="container py-2">
+<a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+<img src="assets/img/logo.png" alt="Logo Keisha Mobil" class="brand-logo me-2">
+<span>Keisha Mobil<small class="d-block fw-normal small">Marketplace Mobil Pilihan Anda</small></span>
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navMain">
+<ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+<li class="nav-item"><a class="nav-link" href="#mobil">Katalog Mobil</a></li>
+<li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+<li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+<li class="nav-item"><a class="btn btn-instagram rounded-pill px-4" href="https://www.instagram.com/mobil_bekas.aceh/" target="_blank"><i class="fa-brands fa-instagram me-2"></i>Instagram</a></li>
+<li class="nav-item"><a class="btn btn-whatsapp rounded-pill px-4" href="https://wa.me/6281234567890" target="_blank"><i class="fa-brands fa-whatsapp me-2"></i>WhatsApp</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<header class="hero">
+<div class="container">
+<span class="badge rounded-pill text-bg-light mb-3">Temukan kendaraan terbaik pilihan Anda</span>
+<h1>Perjalanan baru dimulai dari <span>Keisha Mobil.</span></h1>
+<p>Temukan mobil impian Anda dengan pilihan kendaraan berkualitas. Konsultasikan kebutuhan kendaraan Anda bersama tim kami.</p>
+<div class="d-flex flex-wrap gap-3 mt-4">
+<a href="#mobil" class="btn btn-light rounded-pill px-4 py-3 fw-bold">Lihat Katalog <i class="fa-solid fa-arrow-right ms-2"></i></a>
+<a href="https://www.instagram.com/mobil_bekas.aceh/" target="_blank" class="btn btn-instagram rounded-pill px-4 py-3"><i class="fa-brands fa-instagram me-2"></i>Instagram</a>
+<a href="https://wa.me/6281234567890" target="_blank" class="btn btn-whatsapp rounded-pill px-4 py-3"><i class="fa-brands fa-whatsapp me-2"></i>Konsultasi WhatsApp</a>
+</div>
+</div>
+</header>
+
+<main>
+<section class="container">
+<div class="search-box">
+<label class="form-label fw-bold" for="searchCar">Cari mobil</label>
+<input class="form-control form-control-lg" id="searchCar" placeholder="Cari merek, model, atau tahun...">
+</div>
+</section>
+
+<section class="container py-5" id="mobil">
+<div class="text-center mb-4">
+<div class="kicker mb-2">Katalog kendaraan</div>
+<h2 class="section-title display-6">Mobil pilihan untuk Anda</h2>
+<p class="text-secondary">Tanyakan ketersediaan, kondisi, foto tambahan, dan harga terbaru kepada tim kami.</p>
+</div>
+<div class="row g-4" id="carList"></div>
+</section>
+
+<section class="container testimonial-section" id="testimoni">
+<div class="text-center mb-5"><h2 class="section-title display-6">Testimoni Pelanggan</h2></div>
+<div class="testimonial-wrapper">
+<div class="testimonial-track" id="testimonialTrack">
+<div class="testimonial-slide"><div class="testimonial-card">
+<img class="testimonial-photo" src="https://placehold.co/600x400/e9edf2/34495e?text=Pelanggan+Keisha" alt="Pelanggan">
+<div class="testimonial-info"><h3 class="testimonial-name">Pelanggan Keisha</h3><div class="testimonial-stars">★★★★★ <span class="text-secondary small">5/5</span></div><p class="testimonial-review">"Pelayanan ramah dan proses konsultasi sangat membantu."</p></div>
+</div></div>
+<div class="testimonial-slide"><div class="testimonial-card">
+<img class="testimonial-photo" src="https://placehold.co/600x400/e9edf2/34495e?text=Pelanggan+Puas" alt="Pelanggan">
+<div class="testimonial-info"><h3 class="testimonial-name">Pelanggan Puas</h3><div class="testimonial-stars">★★★★★ <span class="text-secondary small">5/5</span></div><p class="testimonial-review">"Informasi kendaraan jelas, komunikasi juga mudah."</p></div>
+</div></div>
+<div class="testimonial-slide"><div class="testimonial-card">
+<img class="testimonial-photo" src="https://placehold.co/600x400/e9edf2/34495e?text=Terima+Kasih" alt="Pelanggan">
+<div class="testimonial-info"><h3 class="testimonial-name">Pelanggan Keisha</h3><div class="testimonial-stars">★★★★★ <span class="text-secondary small">5/5</span></div><p class="testimonial-review">"Pengalaman mencari mobil jadi lebih nyaman."</p></div>
+</div></div>
+</div>
+<div class="testimonial-controls">
+<button class="testimonial-arrow" onclick="moveTestimonial(-1)" aria-label="Sebelumnya"><i class="fa-solid fa-chevron-left"></i></button>
+<button class="testimonial-arrow" onclick="moveTestimonial(1)" aria-label="Berikutnya"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+</div>
+</section>
+
+<section class="py-5" id="tentang" style="background:var(--paper)">
+<div class="container">
+<div class="row align-items-center g-4">
+<div class="col-lg-5">
+<div class="kicker mb-2">Tentang kami</div>
+<h2 class="section-title display-6">Mencari mobil jadi lebih mudah.</h2>
+<p class="text-secondary">Keisha Mobil membantu Anda menemukan kendaraan pilihan dengan informasi yang jelas dan komunikasi langsung bersama tim kami.</p>
+<a class="btn btn-primary rounded-pill px-4" href="https://wa.me/6281234567890" target="_blank">Hubungi tim kami</a>
+</div>
+<div class="col-lg-7"><div class="row g-3">
+<div class="col-sm-6"><div class="benefit"><div class="benefit-icon"><i class="fa-solid fa-car"></i></div><h3 class="h5 fw-bold">Pilihan kendaraan</h3><p class="text-secondary mb-0">Lihat katalog mobil yang tersedia.</p></div></div>
+<div class="col-sm-6"><div class="benefit"><div class="benefit-icon"><i class="fa-solid fa-comments"></i></div><h3 class="h5 fw-bold">Kontak langsung</h3><p class="text-secondary mb-0">Diskusikan kebutuhan Anda melalui WhatsApp.</p></div></div>
+<div class="col-sm-6"><div class="benefit"><div class="benefit-icon"><i class="fa-solid fa-clipboard-check"></i></div><h3 class="h5 fw-bold">Periksa detail</h3><p class="text-secondary mb-0">Konfirmasi kondisi dan dokumen sebelum transaksi.</p></div></div>
+<div class="col-sm-6"><div class="benefit"><div class="benefit-icon"><i class="fa-solid fa-handshake"></i></div><h3 class="h5 fw-bold">Konsultasi</h3><p class="text-secondary mb-0">Tanyakan harga dan jadwal melihat mobil.</p></div></div>
+</div></div>
+</div>
+</div>
+</section>
+
+<section class="container py-5" id="kontak">
+<div class="contact-panel">
+<div class="row g-4 align-items-center">
+<div class="col-lg-7">
+<div class="kicker mb-2" style="color:var(--gold)">Kontak & lokasi</div>
+<h2 class="display-6 fw-bold">Yuk, temukan mobil Anda.</h2>
+<p>Hubungi kami untuk informasi stok, harga terbaru, dan jadwal kunjungan.</p>
+<p><i class="fa-brands fa-whatsapp me-2 text-success"></i><strong>WhatsApp:</strong> 6281234567890</p>
+<p><i class="fa-solid fa-location-dot me-2" style="color:var(--gold)"></i><strong>Alamat:</strong> Jl. Dr. Mr. Mohd Hasan, Batoh, Kec. Lueng Bata, Kota Banda Aceh, Aceh, 23245</p>
+<p><i class="fa-brands fa-instagram me-2"></i><strong>Instagram:</strong> @mobil_bekas.aceh</p>
+</div>
+<div class="col-lg-5"><div class="bg-white text-dark rounded-4 p-4">
+<h3 class="h5 fw-bold">Ada yang ingin ditanyakan?</h3>
+<p class="text-secondary">Mulai percakapan langsung dengan tim kami.</p>
+<a href="https://wa.me/6281234567890" target="_blank" class="btn btn-whatsapp rounded-pill w-100 py-3"><i class="fa-brands fa-whatsapp me-2"></i>Chat WhatsApp</a>
+</div></div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="km-footer">
+<div class="container">
+<div class="row g-4">
+<div class="col-lg-5 col-md-6">
+<div class="footer-brand">Keisha Mobil</div>
+<p>Marketplace mobil pilihan berkualitas. Temukan kendaraan terbaik untuk menemani perjalanan baru Anda bersama Keisha Mobil.</p>
+<div class="footer-address"><i class="fas fa-map-marker-alt"></i><span>Jl. Dr. Mr. Mohd Hasan, Batoh, Kec. Lueng Bata, Kota Banda Aceh, Aceh, 23245</span></div>
+</div>
+<div class="col-lg-3 col-md-6">
+<h5>Menu</h5>
+<a class="footer-link" href="#mobil">Katalog Mobil</a>
+<a class="footer-link" href="#tentang">Tentang Kami</a>
+<a class="footer-link" href="#testimoni">Testimoni Pelanggan</a>
+<a class="footer-link" href="#kontak">Hubungi Kami</a>
+</div>
+<div class="col-lg-4 col-md-6">
+<h5>Hubungi Kami</h5>
+<p>Ikuti media sosial kami dan hubungi tim Keisha Mobil untuk informasi lebih lanjut.</p>
+<a href="https://wa.me/6281234567890" target="_blank" class="footer-social footer-wa"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+<a href="https://www.instagram.com/mobil_bekas.aceh/" target="_blank" class="footer-social footer-instagram"><i class="fab fa-instagram"></i>Instagram</a>
+</div>
+</div>
+<hr class="footer-divider">
+<div class="text-center">
+<div class="developer-label">Designed &amp; Developed By</div>
+<p class="developer-name">TEUKU MUHAMMAD AMJAD KANA</p>
+<div class="copyright">© 2026 Keisha Mobil. All Rights Reserved.</div>
+</div>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const whatsappNumber = "6281234567890";
+
+const cars = [
+ {brand:"Toyota",model:"Avanza",year:"2022",price:"Rp 215.000.000",fuel:"Bensin",transmission:"Automatic",seats:7,mileage:"25.000",color:"Hitam",image:"https://placehold.co/800x520/e9edf2/34495e?text=Toyota+Avanza"},
+ {brand:"Honda",model:"Brio",year:"2021",price:"Rp 165.000.000",fuel:"Bensin",transmission:"Automatic",seats:5,mileage:"30.000",color:"Putih",image:"https://placehold.co/800x520/e9edf2/34495e?text=Honda+Brio"},
+ {brand:"Mitsubishi",model:"Xpander",year:"2023",price:"Rp 245.000.000",fuel:"Bensin",transmission:"Automatic",seats:7,mileage:"18.000",color:"Silver",image:"https://placehold.co/800x520/e9edf2/34495e?text=Mitsubishi+Xpander"}
+];
+
+function renderCars(list){
+ const container=document.getElementById("carList");
+ container.innerHTML="";
+ list.forEach(car=>{
+  const message=encodeURIComponent(`Halo Keisha Mobil, saya tertarik dengan ${car.brand} ${car.model}. Mohon info detail dan ketersediaannya.`);
+  container.innerHTML+=`
+  <div class="col-md-6 col-lg-4">
+   <article class="car-card">
+    <div class="car-photo"><img src="${car.image}" alt="${car.brand} ${car.model}"></div>
+    <div class="card-body">
+     <span class="pill">Tersedia · Contoh</span>
+     <h3 class="h5 car-title mt-3">${car.brand} ${car.model}</h3>
+     <div class="car-price mb-3">${car.price}</div>
+     <div class="row g-2 car-spec mb-4">
+      <div class="col-6"><i class="fa-regular fa-calendar"></i>${car.year}</div>
+      <div class="col-6"><i class="fa-solid fa-gears"></i>${car.transmission}</div>
+      <div class="col-6"><i class="fa-solid fa-users"></i>${car.seats} penumpang</div>
+      <div class="col-6"><i class="fa-solid fa-gas-pump"></i>${car.fuel}</div>
+      <div class="col-6"><i class="fa-solid fa-road"></i>${car.mileage} km</div>
+      <div class="col-6"><i class="fa-solid fa-palette"></i>${car.color}</div>
+     </div>
+     <a href="https://wa.me/${whatsappNumber}?text=${message}" target="_blank" class="btn btn-success rounded-pill w-100"><i class="fa-brands fa-whatsapp me-2"></i>Tanya via WhatsApp</a>
+    </div>
+   </article>
+  </div>`;
+ });
+}
+
+document.getElementById("searchCar").addEventListener("input",function(){
+ const q=this.value.toLowerCase();
+ renderCars(cars.filter(car=>(car.brand+" "+car.model+" "+car.year).toLowerCase().includes(q)));
+});
+renderCars(cars);
+
+function moveTestimonial(direction){
+ const track=document.getElementById("testimonialTrack");
+ const card=track.querySelector(".testimonial-slide");
+ if(card)track.scrollBy({left:(card.getBoundingClientRect().width+24)*direction,behavior:"smooth"});
+}
+</script>
+</body>
+</html>
